@@ -1,0 +1,44 @@
+﻿@model IEnumerable<LibraryManagement.Models.Dtos.BookDto>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Book List</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-end">
+            <a class="btn btn-sm btn-success mb-2" asp-area="" asp-controller="BookManage" asp-action="AddBook"><i class="fa-sharp fa-regular fa-plus"></i> Add Book</a>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <tr>
+            <th>Book ID</th>
+            <th>Book Name</th>
+            <th>Quantity</th>
+            <th>Author</th>
+            <th>Edition</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+
+            </tr>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td> @book.Id</td>
+                <td> @book.Name</td>
+                <td> @book.Quantity</td>
+                <td> @book.Author</td>
+                <td> @book.Edition</td>
+                <td> @book.Description</td>
+                <td> @book.Status</td>
+                <td>
+                    <a asp-action="UpdateBook" asp-route-id="@book.Id">Edit</a> |
+                    <a asp-action="DeleteBook" asp-route-id="@book.Id">Delete</a>
+            </tr>
+        }
+    </table>
+
+</div>
