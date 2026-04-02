@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="UserManagement.Domain/UserManagement.Domain.csproj" />
+  <Project Path="UserManagement.Infrastructure/UserManagement.Infrastructure.csproj" />
+  <Project Path="UserManagement.UI/UserManagement.UI.csproj" />
+</Solution>
