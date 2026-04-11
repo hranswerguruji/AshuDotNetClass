@@ -1,5 +1,6 @@
 <Solution>
   <Project Path="UserManagement.Domain/UserManagement.Domain.csproj" />
+  <Project Path="UserManagement.DTO/UserManagement.DTO.csproj" Id="cbacf016-f3bf-48c2-ae9b-9d71181385f3" />
   <Project Path="UserManagement.Infrastructure/UserManagement.Infrastructure.csproj" />
   <Project Path="UserManagement.UI/UserManagement.UI.csproj" />
 </Solution>

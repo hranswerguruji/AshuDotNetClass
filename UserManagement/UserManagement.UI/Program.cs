@@ -1,8 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using UserManagement.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddDbContext<UserManagementDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+
+// Middleware to serve static assets from the "wwwroot" folder
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
