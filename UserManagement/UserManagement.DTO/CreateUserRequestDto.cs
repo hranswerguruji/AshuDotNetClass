@@ -1,8 +1,11 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace UserManagement.DTO;
 
 public class CreateUserRequestDto
 {
+    [Display(Name = "First Name")]
     public string FirstName { get; set; }
 
     public string? LastName { get; set; }

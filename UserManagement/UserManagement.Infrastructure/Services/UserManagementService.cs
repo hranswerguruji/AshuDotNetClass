@@ -18,6 +18,7 @@ public class UserManagementService : IUserManagementService
     public async Task<string> CreateUserAsync(CreateUserRequestDto createUserRequestDto)
     {
         // Map CreateUserRequestDto to User entity
+        // DOTO - use mapper here
         string result = string.Empty;
         User user = new User
         {
@@ -26,7 +27,8 @@ public class UserManagementService : IUserManagementService
             Email = createUserRequestDto.Email,
             UserName = createUserRequestDto.UserName,
             Password = createUserRequestDto.Password,
-            IsActive = createUserRequestDto.IsActive
+            IsActive = true,
+            CreatedAt = DateTime.UtcNow
         };
 
         int temp = await _userManagementRepository.CreateUserAsync(user);
@@ -57,6 +59,7 @@ public class UserManagementService : IUserManagementService
         var login = await _userManagementRepository.LoginAsync(userName, password);
         if (login != null)
         {
+            // // DOTO - use mapper here
             user = new UserDto
             {
                 Id = login.Id,

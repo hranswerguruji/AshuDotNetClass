@@ -7,7 +7,7 @@ using UserManagement.Infrastructure.Repositories.Interfaces;
 
 namespace UserManagement.Infrastructure.Repositories;
 
-internal class UserManagementRepository : IUserManagementRepository
+public class UserManagementRepository : IUserManagementRepository
 {
     private readonly UserManagementDbContext _dbContext;
 
