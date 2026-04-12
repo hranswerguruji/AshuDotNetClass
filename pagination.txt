@@ -1,0 +1,14 @@
+Employee list
+public class EmployeeDetail
+{
+List<Employee> employees 
+int TotoalEmployee
+int PageNumber
+int PageSize
+int TotalPages => (int)Math.Ceiling((double)TotoalEmployee/PageSize);
+}
+
+public add(int firstNo=10, int secondNo=20)
+{
+ 
+}

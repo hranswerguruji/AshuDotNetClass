@@ -1,0 +1,98 @@
+Create database DbAshuLearn
+
+use DbAshuLearn
+--Transaction-- ACID property
+-- char(50), varchar(50) --> 
+-- 50      , 50
+-- Gender --> char(1) --> M,F, O
+Create table Users
+(
+Id int identity(100,1),
+Email varchar(120) primary key,
+FirstName varchar(50) not null,
+SecondName varchar(50) null,
+LastName varchar(50) null,
+CreatedOn datetime,
+ModifiedOn datetime
+)
+
+select * from Users
+-- schema --->
+-- what is schema in SQL server?
+
+insert into users (Email, FirstName, SecondName, LastName, CreatedOn)
+             values('pk@gmail.com', 'Pawan Ch', '', 'K', getdate())
+Create table UserDetail
+(
+Id int identity(100,1) primary key,
+Gender char(1),
+Mobile bigint,
+FatherName varchar(50) null,
+CreatedOn datetime,
+ModifiedOn datetime
+)
+
+
+CREATE TABLE UserDetail
+(
+    Id INT IDENTITY(100,1) PRIMARY KEY,
+    UserEmail VARCHAR(120) NOT NULL,
+    Gender CHAR(1),
+    Mobile BIGINT,
+    FatherName VARCHAR(50) NULL,
+    CreatedOn DATETIME,
+    ModifiedOn DATETIME,
+
+    CONSTRAINT FK_UserDetail_Users
+    FOREIGN KEY (UserEmail)
+    REFERENCES Users(Email)
+);
+
+
+select * from UserDetail
+insert into userdetail values('sks@gmail.com', 'O',78977,'Pawan',getdate(),null)
+
+select * from users
+select * from userdetail
+-- First, Last, Email, FatherName
+select u.ID, u.FirstName, u.LastName, Email, ud.FatherName, ud.Mobile, u.CreatedOn from USERS u
+INNER JOIN USERDETAIL ud
+ON u.Email= ud.UserEmail
+
+SELECT 
+    u.ID,
+    u.FirstName,
+    u.LastName,
+    case when ud.Gender='M' then 'Male'
+    when ud.Gender='F' then 'Female'
+    else 'Other' end AS Gender,
+    ud.Gender,
+    u.Email,
+    ud.FatherName,
+    ud.Mobile,
+    FORMAT(u.CreatedOn, 'dd MMM yyyy') AS CreatedOn
+FROM USERS u
+INNER JOIN USERDETAIL ud
+    ON u.Email = ud.UserEmail;
+
+
+
+    SELECT 
+    u.ID,
+    u.FirstName,
+    u.LastName,
+    case when ud.Gender='M' then 'Male'
+    when ud.Gender='F' then 'Female'
+    else 'Other' end AS Gender,
+    ud.Gender,
+    u.Email,
+    ud.FatherName,
+    ud.Mobile,
+    FORMAT(u.CreatedOn, 'dd MMM yyyy') AS CreatedOn
+FROM USERS u
+CROSS JOIN USERDETAIL ud
+
+
+    ON u.Email = ud.UserEmail;
+
+    -- What is store procedure in SQL server?

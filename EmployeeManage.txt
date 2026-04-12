@@ -1,0 +1,70 @@
+
+.NET Framework: Planform Dependent: Window based application
+1. Console Application ---> C#, Black screen out
+2. Window Application --> Software we have install it. 
+3. Web Application --> Word wide web (www) -- Hosting --> ASP.NET --- Deploy on window server 
+4. ASP.NET MVC -->
+
+www.dotnettpoint.com --- Hosting on server
+
+
+
+DotNet Core: Planform Independent
+Window ---> ASP.Net deployment
+Linux -->Java planform independent
+
+ASP.NET:
+UI
+Entity
+DOTO
+.
+.
+.
+
+MVC:
+Model: Class, Entity, DTO 
+View: for UI
+Controller: Heart of MVC
+It is use for code seperation:
+Complexcity reduce 
+
+Crud operation:
+ Insert, Update, Search, Delete -- Whole life in software fields.
+
+ProjectName: EmpployeeManagement:
+
+Entity:
+ Employee:
+ Id guid  PK - JHGKHJ-7897-6876BJ-GHG
+ FirstName string
+ SecondName
+ LastName
+ Email
+ Mobile
+ Address
+
+IEmployeeService
+EmployeeService
+
+
+
+
+
+
+
+
+
+VS2002
+VS2003
+VS2008
+VS2010
+VS2012
+VS2013
+VS2015
+VS2017
+VS2019
+VS2022
+VS2026
+
+
+

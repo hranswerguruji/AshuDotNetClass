@@ -1,0 +1,42 @@
+Document store application:
+I want to upload my documents: 
+1. 10,12,B.Tech, M.Tech, Adhar, PAN
+
+Web application:
+Login/Regitration -- Credential
+
+Registration: 
+Name
+Email
+Gender
+DOB
+Password
+
+--- Save
+After login:
+Home/Dashboard
+Total documents: 10
+
+Upload document:
+Welcome to upload document page:
+1. Select class: Dropdown
+================================================================
+Library Managment:--> Manual Works-->
+Collectons: of books
+IdCard--> Account --> Registration, Login
+Business logic --> 1 student take only 2 books for 15, return
+Fine
+Book damage
+
+
+
+
+
+
+
+
+
+
+
+
+

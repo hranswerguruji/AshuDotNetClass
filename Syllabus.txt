@@ -1,0 +1,15 @@
+19-03-2026:
+30 Days classes:
+
+C# OOPsc- Done
+ASP.NET MVC Core --> One Week
+Web API --> One Week 
+Entity framework --> One Week
+SQL Server --> One Week
+
+Basic Knownledge UI:-
+HTML/CSS
+Bootstrap
+Javascript
+
+

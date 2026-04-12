@@ -1,0 +1,21 @@
+Employee:
+Crud operation:
+Insert, Update, Delete, Search
+Pagination- Doubt
+Filter
+Image upload 
+
+-------------------------
+Note:- You will create notes
+
+-----------------------------
+Authentication:
+
+DbUserManagement:
+
+Role
+
+Create new project: 
+Registration
+Login
+

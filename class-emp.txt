@@ -1,0 +1,37 @@
+Visual Studio:
+
+Add-Migration "InitialMigration"
+Update-Database
+
+CMD:
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+
+
+
+SOLID
+Design Pattern
+
+
+Project: HealthGen 
+Model: Doctor
+ Id
+ Name
+ Experirence
+
+Repository pattern
+
+
+
+
+
+
+
+
+
+
+
+
+
+

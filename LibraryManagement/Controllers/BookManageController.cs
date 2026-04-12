@@ -1,6 +1,9 @@
-﻿using LibraryManagement.Models.Dtos;
+﻿using LibraryManagement.Models;
+using LibraryManagement.Models.Dtos;
 using LibraryManagement.Services.Interfaces;
+using LibraryManagement.Validation;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Threading.Tasks;
 using static Microsoft.CodeAnalysis.CSharp.SyntaxTokenParser;
 
@@ -24,6 +27,17 @@ namespace LibraryManagement.Controllers
         [HttpPost]
         public async Task<IActionResult> AddBook(RequestCreateBookDto requestCreateBookDto)
         {
+            bool isNameValid = ValidationClass.IsValidBookName(requestCreateBookDto.Name);
+            if (!isNameValid)
+            {
+                ViewData["msg"] = "";
+                ViewBag.Message = "Invalid book name. Please avoid special characters.";
+                TempData["Error"] = "Invalid book name. Please avoid special characters.";
+                TempData.Keep();
+                Response.Redirect("Second");
+                
+                return View();
+            }
             bool result = await _libraryManagementService.CreateBookAsync(requestCreateBookDto);
             if (result)
             {

@@ -1,0 +1,23 @@
+
+POC:1 lakh/images/pdf
+image:
+img1, img2, img3
+Tax law in USA:
+Azure service: 
+Free --
+Subcription:
+
+AWS: --
+
+Google: 
+==================================================
+
+Send email:
+How to send an email in .net core?
+
+To: 
+Subject:
+Body: 
+
+Send -- Button
+

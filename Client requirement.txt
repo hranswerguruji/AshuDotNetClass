@@ -1,0 +1,100 @@
+Employee--
+
+Crud-- Create, Update, Search, Delete
+
+Name
+Email
+Phone
+Address
+
+==================
+Name
+Email
+Phone
+Gender -- Radio button -M- Male, F- Female,O- Other
+Departent: HR , Finace, IT Software, IT Hardware -- Dropdown -->
+Address
+
+==========================
+Name
+Email
+Phone
+Gender- F,M,O
+DepartmentId-
+Address
+
+----------------------------------
+Department:
+Id - guid
+Name- varchar(50)
+
+----------------------------------
+Insert into Department()
+
+List of department
+==================================
+Image upload:
+Name
+Email
+Phone
+Gender 
+DepartentId
+ImagePath: +imagepapth+gu87hhu7897.png
+Address
+RoleId
+UserId
+
+------------>
+www/images/employee/uid.png
+=====================================
+
+
+---------------------------------------------------------------------
+public website:
+
+Registration:
+ Users
+  --> Admin (Crud operations for all employee and self data)
+  --> User (Selft detail Add/Modified)
+Login:
+
+Registration:
+Users
+Id - guid
+UserName
+Email
+Password
+IsActive
+CreatedDate
+ModifiedDate
+------------------------------------
+Roles: 
+ Id - guid
+ Name - Admin/User
+=======================================
+
+What is difference between ViewBag, ViewData, TempData, Session?
+What is routing and routing table in MVC?
+What is Application life cycle in MVC?
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

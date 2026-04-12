@@ -1,0 +1,9 @@
+Solution:UserManagement
+ Folder:
+  UserManagement.UI -Controller,Action, View - HTML code
+  UserManagement.Domain --> Entity, project type - Class library 
+  UserManagement.Infrastructure --> Database, Service, Repository, project type - Class library 
+  UserManagement.Dto --> Dto- class - client user side class, project type - Class library 
+  
+
+UserManagement.APIs

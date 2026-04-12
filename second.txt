@@ -1,0 +1,73 @@
+What is function/method in C# .net?
+variable: 
+
+It is block of statement that used for perform some operation.
+
+Marraige:
+
+class Employee
+{
+  // Add new
+  // Update detail
+  // Search
+  // Delete(Soft/Hard Delete) --> Hard delete- records will be deleted permanenet.
+  Soft-> IsDelete/IsActive-- bool
+  1, 0
+ // Constructor declaration
+ public Employee(list of parameters)
+ {
+
+ }
+
+ public void AddEmployee(list of parameters)
+ {
+   // body of method...
+   // Write the logic
+ }
+}
+
+public, private, protected -->
+
+Type of methods:
+1. Paramterized method
+2. NonParamterized method
+3. Static method
+
+Difference b/w method and constructo?
+memory allocation--> single place--> previous value store
+
+variable-->
+
+int a=10;
+a=20;
+a=30;
+
+static int b=10;
+b=20;
+c=30;
+
+GC:
+Gen0: 
+Gen1
+Gen2
+
+=======
+what is difference final, finilize, finally?
+Time sheet:-->
+
+
+Tea machine:-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+

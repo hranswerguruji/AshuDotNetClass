@@ -1,0 +1,45 @@
+
+FirstName
+SecondName
+LastName
+Email
+Mobile
+Address
+
+Empployee:
+
+Logic-
+// Santosh - existing --
+not exist
+  new user 
+exit
+ return error message
+
+
+GET  :
+POST : 
+
+
+.NET
+ Website -->(Write Logic)  --> Web API
+ Software
+ Mobile -->
+
+UI--> 
+ ReactJs
+ ReactNative
+ NextJs
+
+Angular
+
+.NET + Angular / ReajctJs
+Java + Angular / ReajctJs
+
+
+Knowldage: No bargain.
+JAVA:
+2-3: 20 Lakh (API) -- Database
+
+UI, MVC, API, Database -->
+
+Backend:-->

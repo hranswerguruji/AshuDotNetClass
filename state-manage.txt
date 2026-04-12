@@ -1,0 +1,10 @@
+State management technique:
+Transfering data from one page to another
+Type: 
+Client side
+Server side
+
+StateManagement:
+Name:
+Email: 
+Button: 
