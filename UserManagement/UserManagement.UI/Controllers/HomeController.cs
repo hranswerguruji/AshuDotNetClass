@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using UserManagement.DTO;
 using UserManagement.Infrastructure.Services.Interfaces;
+using UserManagement.UI.Helpers;
 using UserManagement.UI.Models;
 
 namespace UserManagement.UI.Controllers
@@ -28,8 +29,47 @@ namespace UserManagement.UI.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(CreateUserRequestDto createUserRequestDto)
         {
+            // validate 
             string result = await _iUserManagementService.CreateUserAsync(createUserRequestDto);
             ViewBag.Message = result;
+            return View();
+        }
+
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Login(LoginRequestDto loginRequestDto)
+        {
+            if (!ValidationHelper.IsValidUserName(loginRequestDto.UserName))
+            {
+                ViewBag.Message = "Invalid username format.";
+                return View();
+            }
+
+            if (!ValidationHelper.IsValidPassword(loginRequestDto.Password))
+            {
+                ViewBag.Message = "Invalid password format.";
+                return View();
+            }
+
+            // validate 
+            var result = await _iUserManagementService.LoginAsync(loginRequestDto.UserName, loginRequestDto.Password);
+
+            if (result != null && result.Email != null)
+            {
+                //ViewBag.Message = $"Welcome {result.FirstName} {result.LastName}";
+                // Store user information in session or cookie as needed
+                return RedirectToAction("Index", "Dashboard");
+            }
+            else
+            {
+                ViewBag.Message = "Invalid username or password.";
+            }
             return View();
         }
 
