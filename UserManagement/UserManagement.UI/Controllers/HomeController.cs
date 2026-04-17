@@ -64,6 +64,10 @@ namespace UserManagement.UI.Controllers
             {
                 //ViewBag.Message = $"Welcome {result.FirstName} {result.LastName}";
                 // Store user information in session or cookie as needed
+
+                HttpContext.Session.SetString("Name", result.FirstName +" "+ result.LastName);
+                HttpContext.Session.SetString("Email", result.Email);
+
                 return RedirectToAction("Index", "Dashboard");
             }
             else

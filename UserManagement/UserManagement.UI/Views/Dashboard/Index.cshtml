@@ -1,1 +1,7 @@
-﻿<h1>Welcome to the Dashboard</h1>
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<h1>Welcome to the Dashboard</h1>
+Name: @ViewBag.Name
+Email: @ViewBag.Email
